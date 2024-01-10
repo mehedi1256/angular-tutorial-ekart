@@ -1,22 +1,3 @@
 <div class="ekart--products--container">
-  <div class="ekart--product--item" *ngFor="let prod of products">
-    <div class="ekart-wishlist-sale-container">
-      <div class="ekart--add--to--wishlist">
-        <i class="fa fa-heart-o" aria-hidden="true"></i>
-      </div>
-      <div class="ekart-on-sale-tag" *ngIf="prod.discountPrice">
-        {{ (100 - (prod.discountPrice / prod.price) * 100).toFixed(0) }}% OFF
-      </div>
-    </div>
-    <div class="ekart--product--image">
-      <img [src]="prod.image" alt="product-image" class="ekart--product--image" />
-    </div>
-    <div class="ekart--add--to--price">{{ prod.price }}TK</div>
-    <div class="ekart--product--name">{{ prod.title }}</div>
-    <div class="ekart--product--category">{{ prod.category }}</div>
-    <div class="ekart--product--available-colors"></div>
-    <div class="ekart--product--in--stock" [ngStyle]="{fontWeight: 'bold', color: prod.inStock ? 'Green' : 'Red'}">
-        {{ prod.inStock ? 'Available in Stock' : 'Not in Stock' }}
-    </div>
-  </div>
+  <app-product *ngFor="let prod of products" [product]="prod"></app-product>
 </div>
