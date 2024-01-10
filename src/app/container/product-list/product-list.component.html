@@ -5,7 +5,7 @@
         <i class="fa fa-heart-o" aria-hidden="true"></i>
       </div>
       <div class="ekart-on-sale-tag" *ngIf="prod.discountPrice">
-        {{ (100 - (prod.discountPrice / prod.price) * 100).toFixed(0) }}
+        {{ (100 - (prod.discountPrice / prod.price) * 100).toFixed(0) }}% OFF
       </div>
     </div>
     <div class="ekart--product--image">

@@ -23,7 +23,7 @@
 .ekart-wishlist-sale-container {
     display: flex;
     width: 270px;
-    position: relative;
+    position: absolute;
     padding: 5px 0px;
 }
 
