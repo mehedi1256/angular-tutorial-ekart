@@ -236,4 +236,9 @@ export class ProductListComponent {
       rating: { rate: 3.6, count: 145 },
     },
   ];
+
+  totalProduct = this.products.length;
+  totalProductInStock = this.products.filter(p => p.inStock === true).length;
+  // totalProductOutOfStock = this.totalProduct - this.totalProductInStock;
+  totalProductOutOfStock = this.products.filter(p => p.inStock === false).length;
 }
