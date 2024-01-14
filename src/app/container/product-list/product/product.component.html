@@ -16,6 +16,6 @@
   <div class="ekart--product--category">{{ product.category }}</div>
   <div class="ekart--product--available-colors"></div>
   <div class="ekart--product--in--stock" [ngStyle]="{ fontWeight: 'bold', color: product.inStock ? 'Green' : 'Red' }">
-    {{ product.inStock ? "Available in Stock" : "Not in Stock" }}
+    {{ product.inStock ? "Available in Stock" : "Out of Stock" }}
   </div>
 </div>
