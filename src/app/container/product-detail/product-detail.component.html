@@ -3,12 +3,12 @@
         <i class="fa fa-times" aria-hidden="true"></i>
     </div>
     <div class="ekart-product-detail-image">
-        <img src="https://images.vans.com/is/image/Vans/MV122M-HERO?$583x583$" class="ekart-product-detail-image" alt="pic" />
+        <img [src]="product.image" class="ekart-product-detail-image" alt="pic" />
     </div>
 
     <div class="ekart-product-detail">
         <div class="ekart-product-detail-name">
-            <h2>Michael February SKB-Hi</h2>
+            <h2>{{ product.title }}</h2>
         </div>
         <div class="ekart-product-detail-gbc">
             <span>MEN</span>
