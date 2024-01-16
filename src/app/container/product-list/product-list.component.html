@@ -7,7 +7,12 @@
 
 <div class="ekart--products--container">
   <!-- *ngIf="selectedFilterRadioButton === 'all' || prod.inStock.toString() === selectedFilterRadioButton " -->
-  <div *ngFor="let prod of products" (click)="selectedProduct = prod">
-    <app-product [product]="prod" *ngIf="searchText === '' || prod.category.toLowerCase().includes(searchText)" ></app-product>
-  </div>
+  <ng-container *ngFor="let prod of products">
+    <app-product 
+      [product]="prod" 
+      *ngIf="searchText === '' || prod.category.toLowerCase().includes(searchText)"
+      (click)="selectedProduct = prod"
+     >
+    </app-product>
+  </ng-container>
 </div>
