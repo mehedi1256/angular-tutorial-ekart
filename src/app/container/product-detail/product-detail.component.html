@@ -11,9 +11,8 @@
             <h2>{{ product.title }}</h2>
         </div>
         <div class="ekart-product-detail-gbc">
-            <span>MEN</span>
-            <span>NIKE</span>
-            <span>SPORTS</span>
+            <span setBackground>{{ product.category }}</span>
+            <span setBackground>${{ product.price }}</span>
         </div>
         <div class="ekart-product-detail-price">
             <p>
