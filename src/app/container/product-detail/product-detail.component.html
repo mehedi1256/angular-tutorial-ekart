@@ -11,8 +11,8 @@
             <h2>{{ product.title }}</h2>
         </div>
         <div class="ekart-product-detail-gbc">
-            <span setBackground>{{ product.category }}</span>
-            <span setBackground>${{ product.price }}</span>
+            <span setBackground [backgroundColor]="'red'" [textColor]="'white'">{{ product.category }}</span>
+            <span setBackground [backgroundColor]="'yellow'" [textColor]="'black'">${{ product.price }}</span>
         </div>
         <div class="ekart-product-detail-price">
             <p>
@@ -56,7 +56,7 @@
         </div>
     </div>
     <div class="ekart-product-detail-addtoCart">
-        <button class="btn-add-to-cart" *ngIf="product.inStock; else notifyMe">ADD TO CART</button>
+        <button class="btn-add-to-cart" *ngIf="product.inStock; else notifyMe" appHover>ADD TO CART</button>
         <ng-template #notifyMe>
             <button class="btn-add-to-cart">NOTIFY ME</button>
         </ng-template>
